@@ -1,7 +1,6 @@
 package mqtt
 
 import (
-	"capstone/pkg/database"
 	"capstone/pkg/logger"
 	"fmt"
 
@@ -13,11 +12,7 @@ type MqttClient struct {
 	Logger       *logger.LoggerInstance
 }
 
-type RequestHandler interface {
-	Handle(client mqtt.Client, msg mqtt.Message)
-}
-
-func NewMqttClient(Logger *logger.LoggerInstance, Database *database.DBInstance) *MqttClient {
+func NewMqttClient(Logger *logger.LoggerInstance) *MqttClient {
 	var client mqtt.Client
 	return &MqttClient{MqttInstance: client, Logger: Logger}
 }
@@ -35,8 +30,9 @@ func (m *MqttClient) SetupMqttClient(Broker string, Port int, ClientID string) {
 	}
 }
 
-func (m *MqttClient) RegisterHandlerAndSubscribe(Topic string, Qos byte, Function RequestHandler) {
-	m.MqttInstance.Subscribe(Topic, Qos, Function.Handle)
+func (m *MqttClient) RegisterHandlerAndSubscribe(Topic string, Qos byte, Function func(client mqtt.Client, msg mqtt.Message)) {
+	m.MqttInstance.Subscribe(Topic, Qos, Function)
+	m.Logger.InfoLogger.Println("Subscribed into: ", Topic)
 }
 
 func (m *MqttClient) connectHandler(client mqtt.Client) {

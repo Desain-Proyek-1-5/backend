@@ -3,11 +3,16 @@ package router
 import (
 	"net/http"
 
+	mqtt "github.com/eclipse/paho.mqtt.golang"
 	mux "github.com/gorilla/mux"
 )
 
 type RouterInstance struct {
 	Router *mux.Router
+}
+
+type RequestHandler interface {
+	Handle(client mqtt.Client, msg mqtt.Message)
 }
 
 func NewRouterInstance() *RouterInstance {

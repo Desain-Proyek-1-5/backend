@@ -1,29 +1,40 @@
 package main
 
 import (
-	"capstone/config"
 	"capstone/pkg/database"
+	httphandler "capstone/pkg/handlers/httpmsghandlers"
+	mqtthandler "capstone/pkg/handlers/mqttmsghandlers"
+	"capstone/pkg/handlers/telegram"
 	"capstone/pkg/logger"
 	"capstone/pkg/mqtt"
 	"capstone/pkg/router"
-	"log"
 )
 
 func main() {
-	Logger := logger.NewLogger("log.txt")
-	databaseConfig, err := config.LoadDatabaseConfiguration()
-	if err != nil {
-		log.Printf("Error setting database : %s\n", err.Error())
-		return
-	}
+	logger := logger.NewLogger("log.txt")
+	/*
+		databaseConfig, err := config.LoadDatabaseConfiguration()
+
+		if err != nil {
+			log.Printf("Error setting database : %s\n", err.Error())
+			return
+		}
+	*/
 	router := router.NewRouterInstance()
-	Database, err := database.NewDatabase("mysql",
-		databaseConfig.Username, databaseConfig.Password, databaseConfig.Address,
-		databaseConfig.DatabaseName)
+	database, err := database.NewDatabase("mysql",
+		"root", "123jonathan123100300!!!", "localhost:3306",
+		"testers")
+
 	if err != nil {
-		Logger.ErrorLogger.Println("Invalid database credentials supplied: ", err.Error())
+		logger.ErrorLogger.Println("Invalid database credentials supplied: ", err.Error())
 	}
-	mqtt := mqtt.NewMqttClient(Logger)
+	telegram := telegram.NewTelegram(logger)
+	mqtt := mqtt.NewMqttClient(logger)
+	mqtt.SetupMqttClient("localhost", 1883, "Server")
+	httpHandler := httphandler.NewHTTPHandler(router, database, logger)
+	httpHandler.RegisterHandlers()
+	mqttHandler := mqtthandler.NewMqttHandler(mqtt, database, logger, telegram)
+	mqttHandler.RegisterHandlers()
 	router.Start()
 
 }

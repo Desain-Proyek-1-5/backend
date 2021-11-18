@@ -1,0 +1,132 @@
+INFO: 2021/09/22 10:54:08 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 10:54:08 mqtt.go:35: Subscribed into:  Alert
+Error: 2021/09/22 10:54:15 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:15 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:15 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:17 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:17 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:17 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:18 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:18 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:18 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:19 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:19 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:19 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:22 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:22 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:22 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:27 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:27 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:27 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:57 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:57 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:54:57 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+INFO: 2021/09/22 10:55:33 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 10:55:34 mqtt.go:35: Subscribed into:  Alert
+Error: 2021/09/22 10:55:41 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:55:41 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:55:41 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:53 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:53 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:53 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:58 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:58 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:58 get_alerts_handler.go:14: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:59 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:59 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:56:59 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+INFO: 2021/09/22 10:58:32 mqtt.go:35: Subscribed into:  Alert
+INFO: 2021/09/22 10:58:32 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 10:58:36 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 10:58:36 mqtt.go:35: Subscribed into:  Alert
+Error: 2021/09/22 10:58:41 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:41 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:41 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:42 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:42 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:42 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:47 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:47 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+Error: 2021/09/22 10:58:47 get_alerts_handler.go:25: Error reading database:  Error 1146: Table 'testers.violations' doesn't exist
+INFO: 2021/09/22 10:59:23 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 10:59:23 mqtt.go:35: Subscribed into:  Alert
+INFO: 2021/09/22 11:00:38 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:00:38 mqtt.go:35: Subscribed into:  Alert
+INFO: 2021/09/22 11:01:05 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:01:05 mqtt.go:35: Subscribed into:  alert
+WARNING: 2021/09/22 11:02:49 mqtt.go:43: Disconnected from MQTT Broker:  pingresp not received, disconnecting
+INFO: 2021/09/22 11:02:49 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:02:54 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:02:54 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:03:31 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:03:31 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:04:01 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:04:01 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:04:21 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:04:21 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:04:37 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:04:37 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:08:44 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:08:44 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:10:53 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:10:53 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 11:25:53 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 11:25:53 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/09/22 12:20:12 mqtt.go:39: Connected into MQTT client
+INFO: 2021/09/22 12:20:12 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/01 21:50:56 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/01 21:50:56 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:23:40 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:23:40 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:25:17 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:25:17 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:26:49 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:26:49 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:27:37 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:27:37 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:28:14 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:28:14 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:28:33 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:28:33 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/02 08:31:07 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/02 08:31:07 mqtt.go:35: Subscribed into:  alert
+WARNING: 2021/10/02 12:14:31 mqtt.go:43: Disconnected from MQTT Broker:  EOF
+INFO: 2021/10/02 12:14:31 mqtt.go:39: Connected into MQTT client
+WARNING: 2021/10/02 15:40:36 mqtt.go:43: Disconnected from MQTT Broker:  EOF
+INFO: 2021/10/02 15:40:36 mqtt.go:39: Connected into MQTT client
+WARNING: 2021/10/02 15:47:22 mqtt.go:43: Disconnected from MQTT Broker:  EOF
+INFO: 2021/10/02 15:47:22 mqtt.go:39: Connected into MQTT client
+WARNING: 2021/10/02 19:13:28 mqtt.go:43: Disconnected from MQTT Broker:  EOF
+INFO: 2021/10/02 19:13:28 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:42:17 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:42:17 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:42:49 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:42:49 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:43:22 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:43:22 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:44:11 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:44:11 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:45:21 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:45:21 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:46:47 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:46:47 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:48:00 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:48:00 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:49:54 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:49:54 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:50:04 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:50:04 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:51:00 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:51:00 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:53:11 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:53:11 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:54:18 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:54:18 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 14:54:37 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 14:54:37 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 15:39:52 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 15:39:52 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/10 15:42:13 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/10 15:42:13 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/10/14 08:53:45 mqtt.go:39: Connected into MQTT client
+INFO: 2021/10/14 08:53:45 mqtt.go:35: Subscribed into:  alert
