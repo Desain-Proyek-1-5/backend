@@ -1,7 +1,7 @@
-package mqtthandlers
+package mqtthandler
 
 import (
-	"capstone/pkg/database"
+	"capstone/pkg/models"
 	"encoding/json"
 	"fmt"
 	"time"
@@ -9,19 +9,10 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 
-type AlertHandler struct {
-	Mqtt     mqtt.Client
-	Database *database.DBInstance
-}
-type Alert struct {
-	Classroom        string `json:"class"`
-	ExpectedDistance string `json:"distance"`
-}
-
-func (a *AlertHandler) Handle(client mqtt.Client, msg mqtt.Message) {
+func (m *MqttHandlers) HandleAlert(client mqtt.Client, msg mqtt.Message) {
 	timeStamp := time.Now().String()
-	var receivedAlert Alert
+	var receivedAlert models.MqttAlert
 	json.Unmarshal(msg.Payload(), &receivedAlert)
-	a.Database.AddData(fmt.Sprintf("INSERT INTO %s (Distance, Time) VALUES (%s,%s)",
+	m.Database.AddData(fmt.Sprintf("INSERT INTO violations (Class, Distance, Time) VALUES ('%s','%s','%s')",
 		receivedAlert.Classroom, receivedAlert.ExpectedDistance, timeStamp))
 }
