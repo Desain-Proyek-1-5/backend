@@ -16,8 +16,8 @@ func (m *MqttHandlers) HandleAlert(client mqtt.Client, msg mqtt.Message) {
 	time := string(timeStamp.Format("2006-01-02 15:04:05"))
 	var receivedAlert models.MqttAlert
 	json.Unmarshal(msg.Payload(), &receivedAlert)
-	query := fmt.Sprintf("INSERT INTO violations (Class, Distance, Time) VALUES ('%s','%s','%s')",
-		receivedAlert.Classroom, receivedAlert.ExpectedDistance, time)
+	query := fmt.Sprintf("INSERT INTO violations (Class, TotalViolations, Time) VALUES ('%s','%s','%s')",
+		receivedAlert.Classroom, receivedAlert.TotalViolations, time)
 	message := fmt.Sprintf("Terdeteksi Pelanggaran jaga jarak di kelas %s", receivedAlert.Classroom)
 	var wg sync.WaitGroup
 	wg.Add(2)

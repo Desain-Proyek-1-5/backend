@@ -8,19 +8,19 @@ import (
 
 func (m *HTTPHandlers) extractInformation(retrieved *database.RetrievedData) []models.ViolationData {
 	var (
-		time     string
-		distance string
-		class    string
+		time            string
+		totalViolations string
+		class           string
 	)
 	var response []models.ViolationData
 	for retrieved.Data.Next() {
 		var each models.ViolationData
-		err := retrieved.Data.Scan(&time, &distance, &class)
+		err := retrieved.Data.Scan(&time, &totalViolations, &class)
 		if err != nil {
 			log.Println("Error retrieving sql  ", err.Error())
 		}
 		each.Time = time
-		each.Distance = distance
+		each.TotalViolations = totalViolations
 		each.Class = class
 		response = append(response, each)
 	}

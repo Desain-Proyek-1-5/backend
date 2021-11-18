@@ -29,7 +29,8 @@ func (t *Telegram) SendTelegramMessage(wg *sync.WaitGroup, ChannelName int64, Pa
 	if err != nil {
 		return
 	}
-	res, err := http.Post("https://api.telegram.org/bot2030379612:AAEI9HSNeWg8CQYHnqgVl9I5uCW--pt8Ggs/sendMessage", "application/json", bytes.NewBuffer(reqBytes))
+	res, err := http.Post("https://api.telegram.org/bot2030379612:AAEI9HSNeWg8CQYHnqgVl9I5uCW--pt8Ggs/sendMessage",
+		"application/json", bytes.NewBuffer(reqBytes))
 
 	if err != nil {
 		fmt.Println(err.Error())

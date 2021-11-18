@@ -1,14 +1,14 @@
 package models
 
 type MqttAlert struct {
-	Classroom        string `json:"class"`
-	ExpectedDistance string `json:"distance"`
+	Classroom       string `json:"class"`
+	TotalViolations string `json:"distance"`
 }
 
 type ViolationData struct {
-	Time     string `json:"time"`
-	Distance string `json:"distance"`
-	Class    string `json:"class"`
+	Time            string `json:"time"`
+	TotalViolations string `json:"violations"`
+	Class           string `json:"class"`
 }
 
 type TelegramOutgoingMessage struct {
