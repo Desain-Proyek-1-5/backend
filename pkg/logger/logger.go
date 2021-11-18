@@ -11,15 +11,11 @@ type LoggerInstance struct {
 	ErrorLogger   *log.Logger
 }
 
-func NewLogger(FileName string) *LoggerInstance {
+func NewLogger() *LoggerInstance {
 
-	file, err := os.OpenFile(FileName, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-	if err != nil {
-		log.Fatal(err)
-	}
-	InfoLogger := log.New(file, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile)
-	WarningLogger := log.New(file, "WARNING: ", log.Ldate|log.Ltime|log.Lshortfile)
-	ErrorLogger := log.New(file, "Error: ", log.Ldate|log.Ltime|log.Lshortfile)
+	InfoLogger := log.New(os.Stdout, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile)
+	WarningLogger := log.New(os.Stdout, "WARNING: ", log.Ldate|log.Ltime|log.Lshortfile)
+	ErrorLogger := log.New(os.Stdout, "Error: ", log.Ldate|log.Ltime|log.Lshortfile)
 	return &LoggerInstance{InfoLogger: InfoLogger, WarningLogger: WarningLogger, ErrorLogger: ErrorLogger}
 
 }

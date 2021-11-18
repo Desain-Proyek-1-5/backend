@@ -8,10 +8,11 @@ import (
 	"capstone/pkg/logger"
 	"capstone/pkg/mqtt"
 	"capstone/pkg/router"
+	"fmt"
 )
 
 func main() {
-	logger := logger.NewLogger("log.txt")
+	logger := logger.NewLogger()
 	/*
 		databaseConfig, err := config.LoadDatabaseConfiguration()
 
@@ -30,7 +31,8 @@ func main() {
 	}
 	telegram := telegram.NewTelegram(logger)
 	mqtt := mqtt.NewMqttClient(logger)
-	mqtt.SetupMqttClient("localhost", 1883, "Server")
+	mqtt.SetupMqttClient("broker.emqx.io", 1883, "golang1231")
+	fmt.Println("Connected to MQTT Client")
 	httpHandler := httphandler.NewHTTPHandler(router, database, logger)
 	httpHandler.RegisterHandlers()
 	mqttHandler := mqtthandler.NewMqttHandler(mqtt, database, logger, telegram)

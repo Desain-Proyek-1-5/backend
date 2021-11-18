@@ -19,5 +19,5 @@ func NewMqttHandler(MQTT *mqtt.MqttClient, Database *database.DBInstance, Logger
 }
 
 func (m *MqttHandlers) RegisterHandlers() {
-	m.Mqtt.RegisterHandlerAndSubscribe("alert", 1, m.HandleAlert)
+	m.Mqtt.RegisterHandlerAndSubscribe("message_to_server_192213", 1, m.HandleAlert)
 }

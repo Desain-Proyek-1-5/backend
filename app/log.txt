@@ -130,3 +130,7 @@ INFO: 2021/10/10 15:42:13 mqtt.go:39: Connected into MQTT client
 INFO: 2021/10/10 15:42:13 mqtt.go:35: Subscribed into:  alert
 INFO: 2021/10/14 08:53:45 mqtt.go:39: Connected into MQTT client
 INFO: 2021/10/14 08:53:45 mqtt.go:35: Subscribed into:  alert
+INFO: 2021/11/18 20:09:18 mqtt.go:39: Connected into MQTT client
+INFO: 2021/11/18 20:09:18 mqtt.go:35: Subscribed into:  message_to_server_192213
+INFO: 2021/11/18 20:10:04 mqtt.go:39: Connected into MQTT client
+INFO: 2021/11/18 20:10:04 mqtt.go:35: Subscribed into:  message_to_server_192213
