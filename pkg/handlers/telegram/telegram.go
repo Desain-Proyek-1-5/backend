@@ -19,7 +19,13 @@ func NewTelegram(Logger *logger.LoggerInstance) *Telegram {
 
 }
 
-func (t *Telegram) SendTelegramMessage(wg *sync.WaitGroup, ChannelName int64, Payload string, ImageLink string) {
+func (t *Telegram) SendTelegramMessage(wg *sync.WaitGroup, Payload string, ImageLink string, Classroom string) {
+	var ChannelName int64
+	if Classroom == "IPA 1" {
+		ChannelName = -616646018
+	} else if Classroom == "IPA 2" {
+		ChannelName = -651422175
+	}
 	reqBody := &models.TelegramOutgoingMessage{
 		ChatID: ChannelName,
 		Text:   Payload,
