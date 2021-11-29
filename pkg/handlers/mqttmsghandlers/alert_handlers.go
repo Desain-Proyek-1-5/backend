@@ -16,13 +16,14 @@ func (m *MqttHandlers) HandleAlert(client mqtt.Client, msg mqtt.Message) {
 	time := string(timeStamp.Format("2006-01-02 15:04:05"))
 	var receivedAlert models.MqttAlert
 	json.Unmarshal(msg.Payload(), &receivedAlert)
-	query := fmt.Sprintf("INSERT INTO violations (Class, TotalViolations, Time) VALUES ('%s','%s','%s')",
-		receivedAlert.Classroom, receivedAlert.TotalViolations, time)
+	query := fmt.Sprintf("INSERT INTO violations (Class, TotalViolations, Timeofdetection, photolink) VALUES ('%s',%d,'%s','%s');",
+		receivedAlert.Classroom, receivedAlert.TotalViolations, time, receivedAlert.ImageLink)
 	message := fmt.Sprintf("Terdeteksi Pelanggaran jaga jarak di kelas %s", receivedAlert.Classroom)
+	fmt.Println(query)
 	var wg sync.WaitGroup
 	wg.Add(2)
 	go m.saveToDatabase(&wg, query)
-	go m.Telegram.SendTelegramMessage(&wg, -578404034, message, receivedAlert.ImageLink)
+	go m.Telegram.SendTelegramMessage(&wg, -651422175, message, receivedAlert.ImageLink)
 	wg.Wait()
 }
 

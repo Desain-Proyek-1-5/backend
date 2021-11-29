@@ -9,7 +9,7 @@ import (
 func (m *HTTPHandlers) extractInformation(retrieved *database.RetrievedData) []models.ViolationData {
 	var (
 		time            string
-		totalViolations string
+		totalViolations int
 		class           string
 	)
 	var response []models.ViolationData

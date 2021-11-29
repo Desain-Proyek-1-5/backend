@@ -23,7 +23,7 @@ func main() {
 	*/
 	router := router.NewRouterInstance()
 	database, err := database.NewDatabase("mysql",
-		"root", "123jonathan123100300!!!", "localhost:3306",
+		"root", "100300", "localhost:3306",
 		"testers")
 
 	if err != nil {

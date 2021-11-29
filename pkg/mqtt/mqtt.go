@@ -4,7 +4,6 @@ import (
 	"capstone/pkg/logger"
 	"fmt"
 	"os"
-	"time"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
@@ -24,8 +23,6 @@ func (m *MqttClient) SetupMqttClient(Broker string, Port int, ClientID string) {
 	opts.AddBroker("tcp://broker.emqx.io:1883")
 	opts.SetClientID(ClientID)
 	opts.SetDefaultPublishHandler(m.messageHandler)
-	opts.SetKeepAlive(60 * time.Second)
-	opts.SetPingTimeout(1 * time.Second)
 
 	opts.OnConnect = m.connectHandler
 	opts.OnConnectionLost = m.connectLostHandler

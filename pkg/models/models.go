@@ -2,13 +2,13 @@ package models
 
 type MqttAlert struct {
 	Classroom       string `json:"class"`
-	TotalViolations string `json:"number_of_violations"`
+	TotalViolations int    `json:"number_of_violations"`
 	ImageLink       string `json:"photo_link"`
 }
 
 type ViolationData struct {
 	Time            string `json:"time"`
-	TotalViolations string `json:"number_of_violations"`
+	TotalViolations int    `json:"number_of_violations"`
 	Class           string `json:"class"`
 	ImageLink       string `json:"photo_link"`
 }
