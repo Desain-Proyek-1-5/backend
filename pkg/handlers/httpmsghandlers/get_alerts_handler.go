@@ -9,7 +9,7 @@ import (
 )
 
 func (h *HTTPHandlers) GetAllViolations(w http.ResponseWriter, r *http.Request) {
-	retrievedData, err := h.Database.RetrieveData("SELECT * FROM violations ORDER BY id")
+	retrievedData, err := h.Database.RetrieveData("SELECT photolink,totalviolations,class,timeofdetection FROM violations ORDER BY id")
 	if err != nil {
 		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
 	}
@@ -22,7 +22,7 @@ func (h *HTTPHandlers) GetViolationsOfClass(w http.ResponseWriter, r *http.Reque
 	w.Header().Set("Access-Control-Allow-Methods", "*")
 	request := mux.Vars(r)
 	class := request["class"]
-	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("Select * from violations WHERE class = '%s' ORDER BY id DESC LIMIT 1;", class))
+	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("Select photolink,totalviolations,class,timeofdetection from violations WHERE class = '%s' ORDER BY id DESC LIMIT 1;", class))
 	if err != nil {
 		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
 	}

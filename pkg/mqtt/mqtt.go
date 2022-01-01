@@ -37,7 +37,7 @@ func (m *MqttClient) RegisterHandlerAndSubscribe(Topic string, Qos byte, Functio
 	token := m.MqttInstance.Subscribe(Topic, Qos, Function)
 	token.Wait()
 	if token.Error() != nil {
-		fmt.Println(token.Error())
+		fmt.Println(token.Error().Error())
 		os.Exit(1)
 	}
 }
@@ -48,7 +48,6 @@ func (m *MqttClient) connectHandler(client mqtt.Client) {
 }
 func (m *MqttClient) connectLostHandler(client mqtt.Client, err error) {
 	m.Logger.WarningLogger.Println("Disconnected from MQTT Broker: ", err.Error())
-
 }
 
 func (m *MqttClient) messageHandler(client mqtt.Client, msg mqtt.Message) {
