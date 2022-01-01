@@ -23,7 +23,7 @@ func (m *MqttHandlers) HandleAlert(client mqtt.Client, msg mqtt.Message) {
 	var wg sync.WaitGroup
 	wg.Add(2)
 	go m.saveToDatabase(&wg, query)
-	go m.Telegram.SendTelegramMessage(&wg, -651422175, message, receivedAlert.ImageLink, receivedAlert.Classroom)
+	go m.Telegram.SendTelegramMessage(&wg, message, receivedAlert.ImageLink, receivedAlert.Classroom)
 	wg.Wait()
 }
 

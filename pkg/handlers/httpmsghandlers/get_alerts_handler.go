@@ -18,9 +18,11 @@ func (h *HTTPHandlers) GetAllViolations(w http.ResponseWriter, r *http.Request) 
 }
 
 func (h *HTTPHandlers) GetViolationsOfClass(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "*")
 	request := mux.Vars(r)
 	class := request["class"]
-	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("SELECT * FROM violations WHERE class = '%s'", class))
+	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("Select * from violations WHERE class = '%s' ORDER BY timeofdetection DESC LIMIT 1;", class))
 	if err != nil {
 		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
 	}

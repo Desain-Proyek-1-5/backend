@@ -7,10 +7,10 @@ type MqttAlert struct {
 }
 
 type ViolationData struct {
-	Time            string `json:"time"`
-	TotalViolations int    `json:"number_of_violations"`
-	Class           string `json:"class"`
-	ImageLink       string `json:"photo_link"`
+	Class           string `json:"kelas"`
+	Time            string `json:"timestamp"`
+	TotalViolations int    `json:"violation"`
+	ImageLink       string `json:"gambar"`
 }
 
 type TelegramPhoto struct {
