@@ -9,11 +9,17 @@ import (
 )
 
 func (h *HTTPHandlers) GetAllViolations(w http.ResponseWriter, r *http.Request) {
-	retrievedData, err := h.Database.RetrieveData("SELECT photolink,totalviolations,class,timeofdetection FROM violations ORDER BY id DESC GROUP BY class;")
+	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("Select photolink,totalviolations,class,timeofdetection from violations WHERE class = '%s' ORDER BY id DESC LIMIT 1;", "IPA 1"))
+	if err != nil {
+		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
+	}
+	nextClass, err := h.Database.RetrieveData(fmt.Sprintf("Select photolink,totalviolations,class,timeofdetection from violations WHERE class = '%s' ORDER BY id DESC LIMIT 1;", "IPA 2"))
 	if err != nil {
 		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
 	}
 	response := h.extractInformation(retrievedData)
+	nextResponse := h.extractInformation(nextClass)
+	response = append(response, nextResponse...)
 	json.NewEncoder(w).Encode(response)
 }
 
