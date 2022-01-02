@@ -9,6 +9,8 @@ import (
 )
 
 func (h *HTTPHandlers) GetAllViolations(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "*")
 	retrievedData, err := h.Database.RetrieveData(fmt.Sprintf("Select photolink,totalviolations,class,timeofdetection from violations WHERE class = '%s' ORDER BY id DESC LIMIT 1;", "IPA 1"))
 	if err != nil {
 		h.Logger.ErrorLogger.Println("Error reading database: ", err.Error())
