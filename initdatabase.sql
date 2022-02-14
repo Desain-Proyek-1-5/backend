@@ -1,7 +1,6 @@
-USE testers;
-drop table violations;
 CREATE Table violations(
-	time varchar(25),
-    class varchar(35),
-    distance varchar(4)
+	Class varchar(20), 
+	TotalViolations int, 
+	Timeofdetection varchar(50), 
+	photolink varchar(100)
 );
