@@ -1,7 +1,7 @@
 package mqtt
 
 import (
-	"capstone/pkg/logger"
+	"distancing-detect-backend/pkg/logger"
 	"fmt"
 	"os"
 

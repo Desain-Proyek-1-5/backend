@@ -1,8 +1,8 @@
 package httphandler
 
 import (
-	"capstone/pkg/database"
-	"capstone/pkg/models"
+	"distancing-detect-backend/pkg/database"
+	"distancing-detect-backend/pkg/models"
 	"log"
 )
 

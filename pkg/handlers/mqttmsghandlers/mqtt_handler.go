@@ -1,10 +1,10 @@
 package mqtthandler
 
 import (
-	"capstone/pkg/database"
-	"capstone/pkg/handlers/telegram"
-	"capstone/pkg/logger"
-	"capstone/pkg/mqtt"
+	"distancing-detect-backend/pkg/database"
+	"distancing-detect-backend/pkg/handlers/telegram"
+	"distancing-detect-backend/pkg/logger"
+	"distancing-detect-backend/pkg/mqtt"
 )
 
 type MqttHandlers struct {

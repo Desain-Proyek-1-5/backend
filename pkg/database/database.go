@@ -1,12 +1,8 @@
 package database
 
 import (
-	mysql "capstone/pkg/database/mysql"
 	"database/sql"
-	"errors"
-	"fmt"
 	"log"
-	"strings"
 )
 
 type DBInstance struct {
@@ -17,19 +13,12 @@ type RetrievedData struct {
 	Data *sql.Rows
 }
 
-func NewDatabase(DatabaseManagementSystem string, Username string, Password string, Address string, DatabaseName string) (*DBInstance, error) {
-	var DB *sql.DB
-	var err error
-	switch strings.ToLower(DatabaseManagementSystem) {
-	case "mysql":
-		DB, err = mysql.Connect(fmt.Sprintf("%s:%s@tcp(%s)/%s", Username, Password, Address, DatabaseName))
-		if err != nil {
-			return nil, err
-		}
-	default:
-		return nil, errors.New(fmt.Sprintf("%s database is not implemented", DatabaseManagementSystem))
+func NewDatabase(databaseURL string) (*DBInstance, error) {
+	db, err := sql.Open("postgres", databaseURL)
+	if err != nil {
+		panic(err)
 	}
-	return &DBInstance{DB}, nil
+	return &DBInstance{db}, nil
 }
 
 func (a *DBInstance) AddData(Query string) error {

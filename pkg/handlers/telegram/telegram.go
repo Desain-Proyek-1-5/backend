@@ -2,8 +2,8 @@ package telegram
 
 import (
 	"bytes"
-	"capstone/pkg/logger"
-	"capstone/pkg/models"
+	"distancing-detect-backend/pkg/logger"
+	"distancing-detect-backend/pkg/models"
 	"encoding/json"
 	"fmt"
 	"net/http"

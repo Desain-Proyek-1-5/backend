@@ -1,0 +1,16 @@
+# github.com/eclipse/paho.mqtt.golang v1.3.5
+## explicit; go 1.14
+github.com/eclipse/paho.mqtt.golang
+github.com/eclipse/paho.mqtt.golang/packets
+# github.com/go-sql-driver/mysql v1.6.0
+## explicit; go 1.10
+# github.com/gorilla/mux v1.8.0
+## explicit; go 1.12
+github.com/gorilla/mux
+# github.com/gorilla/websocket v1.4.2
+## explicit; go 1.12
+github.com/gorilla/websocket
+# golang.org/x/net v0.0.0-20210503060351-7fd8e65b6420
+## explicit; go 1.17
+golang.org/x/net/internal/socks
+golang.org/x/net/proxy

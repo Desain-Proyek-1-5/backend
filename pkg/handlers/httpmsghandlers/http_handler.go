@@ -1,9 +1,9 @@
 package httphandler
 
 import (
-	"capstone/pkg/database"
-	"capstone/pkg/logger"
-	"capstone/pkg/router"
+	"distancing-detect-backend/pkg/database"
+	"distancing-detect-backend/pkg/logger"
+	"distancing-detect-backend/pkg/router"
 )
 
 type HTTPHandlers struct {

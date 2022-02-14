@@ -1,14 +1,15 @@
 package main
 
 import (
-	"capstone/pkg/database"
-	httphandler "capstone/pkg/handlers/httpmsghandlers"
-	mqtthandler "capstone/pkg/handlers/mqttmsghandlers"
-	"capstone/pkg/handlers/telegram"
-	"capstone/pkg/logger"
-	"capstone/pkg/mqtt"
-	"capstone/pkg/router"
+	"distancing-detect-backend/pkg/database"
+	httphandler "distancing-detect-backend/pkg/handlers/httpmsghandlers"
+	mqtthandler "distancing-detect-backend/pkg/handlers/mqttmsghandlers"
+	"distancing-detect-backend/pkg/handlers/telegram"
+	"distancing-detect-backend/pkg/logger"
+	"distancing-detect-backend/pkg/mqtt"
+	"distancing-detect-backend/pkg/router"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -22,9 +23,7 @@ func main() {
 		}
 	*/
 	router := router.NewRouterInstance()
-	database, err := database.NewDatabase("mysql",
-		"root", "100300", "localhost:3306",
-		"testers")
+	database, err := database.NewDatabase(os.Getenv("DATABASE_URL"))
 
 	if err != nil {
 		logger.ErrorLogger.Println("Invalid database credentials supplied: ", err.Error())

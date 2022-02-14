@@ -1,7 +1,7 @@
 package mqtthandler
 
 import (
-	"capstone/pkg/models"
+	"distancing-detect-backend/pkg/models"
 	"encoding/json"
 	"fmt"
 	"sync"
