@@ -45,7 +45,7 @@ func parseConfig() (string, map[string]int64, string, string) {
 	if err != nil {
 		panic(err)
 	}
-	var classChannels map[string]int64
+	classChannels := make(map[string]int64)
 	for _, class := range config.Telegram.Class {
 		classChannels[class.Classroom] = class.GroupId
 	}
