@@ -1,0 +1,23 @@
+{
+    "telegram": 
+    {
+        "telegram_bot_id" : "https://api.telegram.org/bot5120282372:AAFcXdDmwC4vsoERGFt797I0oQZAkSovMOA",
+        "classes" : [
+            {
+                "class" : "IPA 1",
+                "group_id" : -3498238
+            },
+            {
+                "class" : "IPA 2",
+                "group_id" : -2391239
+            }
+        ]
+    },
+    "mqtt" :
+    {
+        "mqtt_broker" : "tcp://broker.emqx.io:1883",
+        "mqtt_id" : "mqtt-http-server-uQkndf-1",
+        "notification_channel" : "notification_channel_uQkndf"
+    }
+}
+   
