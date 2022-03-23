@@ -6,6 +6,7 @@ import (
 	"distancing-detect-backend/internal/usecase"
 	"distancing-detect-backend/pkg/logger"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 
@@ -64,6 +65,7 @@ func (c *Controller) setTelegramWebHook() {
 		panic(err)
 	}
 	resp, err := http.Post(c.botUrl+"/setWebhook", "application/json", bytes.NewBuffer(req))
+	fmt.Println(resp.StatusCode)
 	if resp.StatusCode != 200 {
 		c.logger.ErrorLogger.Println("Telegram Error: ", resp.Body)
 		panic("Telegram Error!")
