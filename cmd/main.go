@@ -21,11 +21,11 @@ func parseConfig() (string, map[string]int64, string, string) {
 			"classes" : [
 				{
 					"class" : "IPA 1",
-					"group_id" : -3498238
+					"group_id" : -673706474
 				},
 				{
 					"class" : "IPA 2",
-					"group_id" : -2391239
+					"group_id" : -708445267
 				}
 			]
 		},

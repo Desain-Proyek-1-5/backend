@@ -8,6 +8,7 @@ import (
 )
 
 func (c *Controller) HandleAlert(client mqtt.Client, msg mqtt.Message) {
+	c.logger.InfoLogger.Println("Detected violations")
 	var receivedAlert models.MqttAlert
 	err := json.Unmarshal(msg.Payload(), &receivedAlert)
 	if err != nil {
@@ -19,5 +20,7 @@ func (c *Controller) HandleAlert(client mqtt.Client, msg mqtt.Message) {
 		c.logger.ErrorLogger.Println("Error Creating violations : ", err.Error())
 		return
 	}
+	c.sendTelegramMessage("Violations Detected", c.telegramChannels[receivedAlert.Classroom])
+	c.sendTelegramImage(receivedAlert.ImageLink, c.telegramChannels[receivedAlert.Classroom])
 
 }
