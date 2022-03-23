@@ -54,6 +54,7 @@ func (c *Controller) registerMqttHandler() {
 	if token := c.mqttRouter.Subscribe("3deef803-2854-495d-b641-677c7bda1979", 1, c.HandleAlert); token.Wait() && token.Error() != nil {
 		panic(token.Error())
 	}
+	c.logger.InfoLogger.Println("Connected into topic 3deef803-2854-495d-b641-677c7bda1979")
 
 }
 
@@ -86,6 +87,5 @@ func (c *Controller) Start() {
 		panic(token.Error())
 	}
 	c.registerMqttHandler()
-
 	http.ListenAndServe(":"+port, handler)
 }
