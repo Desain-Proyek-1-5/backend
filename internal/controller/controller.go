@@ -65,7 +65,7 @@ func (c *Controller) setTelegramWebHook() {
 		panic(err)
 	}
 	resp, err := http.Post(c.botUrl+"/setWebhook", "application/json", bytes.NewBuffer(req))
-	fmt.Println(resp.StatusCode)
+	fmt.Println(callbackUrl)
 	if resp.StatusCode != 200 {
 		c.logger.ErrorLogger.Println("Telegram Error: ", resp.Body)
 		panic("Telegram Error!")
