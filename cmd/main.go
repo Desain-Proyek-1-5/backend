@@ -7,7 +7,6 @@ import (
 	"distancing-detect-backend/internal/usecase"
 	"distancing-detect-backend/pkg/logger"
 	"encoding/json"
-	"io/ioutil"
 	"os"
 )
 
@@ -15,12 +14,34 @@ func parseConfig() (string, map[string]int64, string, string) {
 	/*
 		Returns Telegram Bot id, class channel as a map, mqtt notification channel id, and mqtt id
 	*/
+	configuration := `{
+		"telegram": 
+		{
+			"telegram_bot_id" : "https://api.telegram.org/bot5120282372:AAFcXdDmwC4vsoERGFt797I0oQZAkSovMOA",
+			"classes" : [
+				{
+					"class" : "IPA 1",
+					"group_id" : -3498238
+				},
+				{
+					"class" : "IPA 2",
+					"group_id" : -2391239
+				}
+			]
+		},
+		"mqtt" :
+		{
+			"mqtt_broker" : "tcp://broker.emqx.io:1883",
+			"mqtt_id" : "mqtt-http-server-uQkndf-1",
+			"notification_channel" : "notification_channel_uQkndf"
+		}
+	}
+	`
 	var config entity.Configuration
-	configFile, err := ioutil.ReadFile("../configs/config.json")
+	err := json.Unmarshal([]byte(configuration), &config)
 	if err != nil {
 		panic(err)
 	}
-	err = json.Unmarshal(configFile, &config)
 	if err != nil {
 		panic(err)
 	}
