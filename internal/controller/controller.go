@@ -40,7 +40,6 @@ func NewController(mqttBroker string, mqttClientId string, mqttChannel string, t
 		logger:           logger,
 	}
 	controller.registerHttpHandler()
-	controller.registerMqttHandler()
 	controller.setTelegramWebHook()
 	return controller
 }
@@ -86,5 +85,7 @@ func (c *Controller) Start() {
 	if token := c.mqttRouter.Connect(); token.Wait() && token.Error() != nil {
 		panic(token.Error())
 	}
+	c.registerMqttHandler()
+
 	http.ListenAndServe(":"+port, handler)
 }
